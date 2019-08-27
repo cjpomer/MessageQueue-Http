@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Anon.AspNetCore.ReusableServer/bin/Debug/netcoreapp2.2
+/Anon.AspNetCore.ReusableServer/obj/Debug/netcoreapp2.2
+/Anon.AspNetCore.ReusableServer/obj/Release/netcoreapp2.2
+/Anon.AspNetCore.ReusableServer/obj
+/Anon.AspNetCore.ServiceBusReverseProxy/bin/Debug/netcoreapp3.0
+/Anon.AspNetCore.ServiceBusReverseProxy/obj
