@@ -1,4 +1,4 @@
-# Anon.AspNetCore.ServiceBusProtocolTransition
+# MessageQueue-Http
 Proof of concept to examine transitioning from a message queue to an HTTP server
 
 #### Prerequisite
