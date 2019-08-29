@@ -8,3 +8,6 @@
 /Anon.AspNetCore.ReusableServer/obj
 /Anon.AspNetCore.ServiceBusReverseProxy/bin/Debug/netcoreapp3.0
 /Anon.AspNetCore.ServiceBusReverseProxy/obj
+/.vs
+/Anon.Http/bin/Debug/netstandard2.0
+/Anon.Http/obj

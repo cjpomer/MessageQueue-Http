@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Anon.ServiceBus
+namespace Anon.Http
 {
     public class HttpRequestBuilder
     {

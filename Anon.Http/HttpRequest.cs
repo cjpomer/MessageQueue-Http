@@ -1,4 +1,4 @@
-﻿namespace Anon.ServiceBus
+﻿namespace Anon.Http
 {
     public struct HttpRequest
     {

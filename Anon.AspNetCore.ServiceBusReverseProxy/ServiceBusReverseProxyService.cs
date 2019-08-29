@@ -1,4 +1,4 @@
-﻿using Anon.ServiceBus;
+﻿using Anon.Http;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -14,14 +14,14 @@ namespace Anon.AspNetCore.ServiceBusProtocolTransition
 {
     public class ServiceBusReverseProxyService : IHostedService
     {
-        private readonly IQueueClient queueClient;
+        private readonly ISubscriptionClient subscriptionClient;
         private readonly ILogger logger;
         private readonly IConfiguration config;
         private readonly HttpClient httpClient;
 
-        public ServiceBusReverseProxyService(IQueueClient queueClient, ILogger<ServiceBusReverseProxyService> logger, IConfiguration config)
+        public ServiceBusReverseProxyService(ISubscriptionClient subscriptionClient, ILogger<ServiceBusReverseProxyService> logger, IConfiguration config)
         {
-            this.queueClient = queueClient;
+            this.subscriptionClient = subscriptionClient;
             this.logger = logger;
             this.config = config;
             httpClient = new HttpClient();
@@ -59,25 +59,40 @@ namespace Anon.AspNetCore.ServiceBusProtocolTransition
             try
             {
                 response = await httpClient.SendAsync(requestMessage);
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    await subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
+                    log = $"{log} complete=true";
+                }
+                else
+                {
+                    await subscriptionClient.DeadLetterAsync(message.SystemProperties.LockToken);
+                    log = $"{log} dead-letter=true";
+                }
             }
             catch (Exception ex)
             {
-                logger.LogInformation($"{log} error={ex.GetType().Name}");
-                logger.LogError(ex.ToString());
+                log = $"{log} error={ex.GetType().Name} error-correlation={message.SystemProperties.LockToken}";
+                logger.LogError($"error-correlation={message.SystemProperties.LockToken} {ex.ToString()}");
             }
-
-            logger.LogInformation($"{log} status={response?.StatusCode.ToString() ?? "none"}");
+            finally { logger.LogInformation($"{log} status={response?.StatusCode.ToString() ?? "none"}"); }
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            queueClient.RegisterMessageHandler(HandleMessage, args => Task.CompletedTask);
+            subscriptionClient.RegisterMessageHandler(HandleMessage, new MessageHandlerOptions(HandleError) { AutoComplete = false, MaxConcurrentCalls = config.GetMaxConcurrentCalls() });
+            return Task.CompletedTask;
+        }
+
+        private Task HandleError(ExceptionReceivedEventArgs arg)
+        {
+            logger.LogError(arg.Exception.ToString());
             return Task.CompletedTask;
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
         {
-            await queueClient.CloseAsync();
+            await subscriptionClient.CloseAsync();
         }
     }
 }

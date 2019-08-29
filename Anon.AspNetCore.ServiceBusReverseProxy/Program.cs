@@ -15,10 +15,11 @@ namespace Anon.AspNetCore.ServiceBusProtocolTransition
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-            .ConfigureServices((hostContext, services) =>
+            .ConfigureServices((host, services) =>
             {
                 services.AddLogging()
-                    .AddScoped<IQueueClient, TestQueueClient>()
+                    .AddScoped<ISubscriptionClient, SubscriptionClient>(isp => 
+                        new SubscriptionClient(host.Configuration.GetServiceBusConnectionString(), host.Configuration.GetTopicName(), host.Configuration.GetSubscriptionName()))
                     .AddHostedService<ServiceBusReverseProxyService>();
             });
     }
