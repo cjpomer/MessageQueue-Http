@@ -8,11 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readme.md = readme.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anon.AspNetCore.ReusableServer", "Anon.AspNetCore.ReusableServer\Anon.AspNetCore.ReusableServer.csproj", "{344E6870-DDAB-45A4-8718-F0EAEDC31297}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anon.OnPremUploadDownload.AspNetCore", "Anon.OnPremUploadDownload.AspNetCore\Anon.OnPremUploadDownload.AspNetCore.csproj", "{B99F4187-77A6-45F5-B98C-009F94D7E7E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anon.AspNetCore.ServiceBusReverseProxy", "Anon.AspNetCore.ServiceBusReverseProxy\Anon.AspNetCore.ServiceBusReverseProxy.csproj", "{6FA530F2-51F7-44D9-A998-A6C988DD325A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anon.OnPremUploadDownload.ServiceBusReverseProxy", "Anon.OnPremUploadDownload.ServiceBusReverseProxy\Anon.OnPremUploadDownload.ServiceBusReverseProxy.csproj", "{90A69F79-6DB6-4CF1-A57B-4095085385BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anon.Http", "Anon.Http\Anon.Http.csproj", "{6445712D-6536-4533-A421-CFCFF9EEC2D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anon.OnPremUploadDownload.Http", "Anon.OnPremUploadDownload.Http\Anon.OnPremUploadDownload.Http.csproj", "{4D6362D2-E016-49C1-A094-97B8721C4C96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,18 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{344E6870-DDAB-45A4-8718-F0EAEDC31297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{344E6870-DDAB-45A4-8718-F0EAEDC31297}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{344E6870-DDAB-45A4-8718-F0EAEDC31297}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{344E6870-DDAB-45A4-8718-F0EAEDC31297}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6FA530F2-51F7-44D9-A998-A6C988DD325A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FA530F2-51F7-44D9-A998-A6C988DD325A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FA530F2-51F7-44D9-A998-A6C988DD325A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FA530F2-51F7-44D9-A998-A6C988DD325A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6445712D-6536-4533-A421-CFCFF9EEC2D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6445712D-6536-4533-A421-CFCFF9EEC2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6445712D-6536-4533-A421-CFCFF9EEC2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6445712D-6536-4533-A421-CFCFF9EEC2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B99F4187-77A6-45F5-B98C-009F94D7E7E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99F4187-77A6-45F5-B98C-009F94D7E7E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99F4187-77A6-45F5-B98C-009F94D7E7E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99F4187-77A6-45F5-B98C-009F94D7E7E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A69F79-6DB6-4CF1-A57B-4095085385BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A69F79-6DB6-4CF1-A57B-4095085385BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A69F79-6DB6-4CF1-A57B-4095085385BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A69F79-6DB6-4CF1-A57B-4095085385BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D6362D2-E016-49C1-A094-97B8721C4C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6362D2-E016-49C1-A094-97B8721C4C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6362D2-E016-49C1-A094-97B8721C4C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6362D2-E016-49C1-A094-97B8721C4C96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

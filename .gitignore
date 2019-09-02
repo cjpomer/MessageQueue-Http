@@ -11,3 +11,9 @@
 /.vs
 /Anon.Http/bin/Debug/netstandard2.0
 /Anon.Http/obj
+/Anon.OnPremUploadDownload.ServiceBusReverseProxy/bin/Debug/netcoreapp3.0
+/Anon.OnPremUploadDownload.ServiceBusReverseProxy/obj
+/Anon.OnPremUploadDownload.Http/bin/Debug/netstandard2.0
+/Anon.OnPremUploadDownload.Http/obj
+/Anon.OnPremUploadDownload.AspNetCore/bin/Debug/netcoreapp2.2
+/Anon.OnPremUploadDownload.AspNetCore/obj
