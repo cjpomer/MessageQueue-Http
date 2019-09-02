@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Threading.Tasks;
 
-namespace Anon.AspNetCore.ReusableServer.Filters
+namespace Anon.OnPremUploadDownload.AspNetCore.Filters
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
     public class AuthorizeEnterpriseIamAttribute : Attribute, IAsyncAuthorizationFilter

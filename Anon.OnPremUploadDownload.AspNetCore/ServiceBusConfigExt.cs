@@ -1,7 +1,7 @@
 ﻿using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Configuration;
 
-namespace Anon.AspNetCore.ReusableServer
+namespace Anon.OnPremUploadDownload.AspNetCore
 {
     public static class ServiceBusConfigExt
     {

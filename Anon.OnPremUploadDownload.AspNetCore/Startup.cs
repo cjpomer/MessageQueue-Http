@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Anon.AspNetCore.ReusableServer
+namespace Anon.OnPremUploadDownload.AspNetCore
 {
     public class Startup
     {
@@ -29,6 +29,7 @@ namespace Anon.AspNetCore.ReusableServer
             services
                 .AddScoped<ITopicClient, TopicClient>(isp => new TopicClient(Configuration.GetServiceBusConnectionStringBuilder()))
                 .AddScoped(isp => new CloudBlobContainer(Configuration.GetContainerUri(), Configuration.GetStorageCredentials()))
+                .AddScoped<IHttpMessageFactory, HttpMessageFactory>()
                 .AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

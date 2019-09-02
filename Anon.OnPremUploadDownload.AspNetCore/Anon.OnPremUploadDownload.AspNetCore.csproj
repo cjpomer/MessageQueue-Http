@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Anon.Http\Anon.Http.csproj" />
+    <ProjectReference Include="..\Anon.OnPremUploadDownload.Http\Anon.OnPremUploadDownload.Http.csproj" />
   </ItemGroup>
 
 </Project>

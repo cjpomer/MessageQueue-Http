@@ -2,7 +2,7 @@
 using Microsoft.Azure.Storage.Auth;
 using Microsoft.Extensions.Configuration;
 
-namespace Anon.AspNetCore.ReusableServer
+namespace Anon.OnPremUploadDownload.AspNetCore
 {
     public static class AzureStorageExt
     {
