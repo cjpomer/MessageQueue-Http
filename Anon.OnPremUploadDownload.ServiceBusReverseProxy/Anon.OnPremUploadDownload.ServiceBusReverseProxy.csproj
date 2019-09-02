@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Anon.Http\Anon.Http.csproj" />
+    <ProjectReference Include="..\Anon.OnPremUploadDownload.Http\Anon.OnPremUploadDownload.Http.csproj" />
   </ItemGroup>
 
   <ItemGroup>

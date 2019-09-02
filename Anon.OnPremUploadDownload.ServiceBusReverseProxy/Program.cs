@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Anon.AspNetCore.ServiceBusProtocolTransition
+namespace Anon.OnPremUploadDownlaod.ServiceBusReverseProxy
 {
     class Program
     {
@@ -18,7 +18,7 @@ namespace Anon.AspNetCore.ServiceBusProtocolTransition
             .ConfigureServices((host, services) =>
             {
                 services.AddLogging()
-                    .AddScoped<ISubscriptionClient, SubscriptionClient>(isp => 
+                    .AddScoped<ISubscriptionClient, SubscriptionClient>(isp =>
                         new SubscriptionClient(host.Configuration.GetServiceBusConnectionString(), host.Configuration.GetTopicName(), host.Configuration.GetSubscriptionName()))
                     .AddHostedService<ServiceBusReverseProxyService>();
             });

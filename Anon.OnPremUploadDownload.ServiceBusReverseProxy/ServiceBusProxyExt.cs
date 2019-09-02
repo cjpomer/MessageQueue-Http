@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 
-namespace Anon.AspNetCore.ServiceBusProtocolTransition
+namespace Anon.OnPremUploadDownlaod.ServiceBusReverseProxy
 {
     internal static class ServiceBusProxyExt
     {

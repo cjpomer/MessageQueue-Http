@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace Anon.AspNetCore.ServiceBusProtocolTransition
+namespace Anon.OnPremUploadDownlaod.ServiceBusReverseProxy
 {
     internal static class SubscriptionClientExt
     {

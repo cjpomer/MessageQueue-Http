@@ -1,4 +1,4 @@
-﻿using Anon.Http;
+﻿using Anon.OnPremUploadDownload.Http;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Anon.AspNetCore.ServiceBusProtocolTransition
+namespace Anon.OnPremUploadDownlaod.ServiceBusReverseProxy
 {
     public class ServiceBusReverseProxyService : IHostedService
     {
