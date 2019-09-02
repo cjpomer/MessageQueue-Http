@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Anon.Http
+namespace Anon.OnPremUploadDownload.Http
 {
     public class HttpRequestBuilder
     {

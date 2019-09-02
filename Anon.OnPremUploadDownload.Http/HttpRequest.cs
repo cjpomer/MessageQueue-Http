@@ -1,4 +1,4 @@
-﻿namespace Anon.Http
+﻿namespace Anon.OnPremUploadDownload.Http
 {
     public struct HttpRequest
     {
